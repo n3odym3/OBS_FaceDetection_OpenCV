@@ -18,12 +18,10 @@ lastscene = ""
 mqtt_process = None
 #Multiprocessing Queues==============
 
-#Object construction=======================================================================
 video = Video(0, None)
 yunet_detector =  YunetDetector(model=settings["yunet"]["model"])
 obs_ws = OBS_WS()
 scenes = Scenes(settings["scenes"])
-#Object construction=======================================================================
 
 #OpenCV mouse callback=====================================================================
 #This function is triggered when you interact with the video using your mouse
@@ -37,8 +35,10 @@ def mouse_callback(event, x, y, flags, params):
 
 #MAIN =====================================================================================
 if __name__ == '__main__' : 
+    multiprocessing.freeze_support()
+    
     gui_process.start() #Start the GUI process
-
+    
     gui_event, gui_values = "",{} #Events ans state of the GUI
     to_gui_list.append(('scenes-list', list(settings["scenes"]))) #Update the "scene" option menu from the saved scenes
 
@@ -76,7 +76,7 @@ if __name__ == '__main__' :
 
                     if gui_values['video-show'] : #Create/display and resize the image window
                         cv2.namedWindow('Frame', cv2.WINDOW_NORMAL)
-                        # cv2.resizeWindow('Frame', 1280, 720)
+                        cv2.resizeWindow('Frame', 1280, 720)
                         cv2.imshow('Frame', frame)
                     
                     #Send the current framerate to the GUI

@@ -1,6 +1,6 @@
 {
  "yunet": {
-  "model": "face_detection_yunet_2023mar.onnx"
+  "model": "./face_detection_yunet_2023mar.onnx"
  },
  "mqtt": {
   "broker": "192.168.1.100",
@@ -11,9 +11,28 @@
   "topic_out": "facedetect/out"
  },
  "obs_ws": {
-  "server": "192.168.1.10",
+  "server": "192.168.178.10",
   "port": "4455",
-  "password": "password"
+  "password": "motdepasse"
  },
- "scenes": {}
+ "scenes": {
+  "Talk Chat": [
+   [
+    163,
+    472
+   ],
+   [
+    514,
+    476
+   ],
+   [
+    594,
+    661
+   ],
+   [
+    196,
+    709
+   ]
+  ]
+ }
 }

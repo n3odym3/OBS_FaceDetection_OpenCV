@@ -3,9 +3,6 @@
 import cv2
 import time 
 import numpy as np
-import mediapipe as mp
-from yoloface import face_analysis
-
 
 class Video:
 	def __init__(self,port, api):
