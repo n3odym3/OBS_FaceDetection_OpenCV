@@ -11,28 +11,9 @@
   "topic_out": "facedetect/out"
  },
  "obs_ws": {
-  "server": "192.168.178.10",
+  "server": "192.168.1.10",
   "port": "4455",
-  "password": "motdepasse"
+  "password": "password"
  },
- "scenes": {
-  "Talk Chat": [
-   [
-    163,
-    472
-   ],
-   [
-    514,
-    476
-   ],
-   [
-    594,
-    661
-   ],
-   [
-    196,
-    709
-   ]
-  ]
- }
+ "scenes": {}
 }
